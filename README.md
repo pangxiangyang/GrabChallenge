@@ -17,4 +17,7 @@ The input file path can be changed by alter the variable TRAINING_FILE_PATH in t
 To start the prediction, please download all the required files, and ensure all of them are in the same directory as per the .ipynb file.
 Prediction can be executed by calling the predict method, by providing the TESTING_FILE_PATH & MODEL_FILE_PATH. Please adjust the TESTING_FILE_PATH & MODEL_FILE_PATH accordingly. The predict method will return a dictionary of geohash - predicted values of 5 time steps. 
 
-
+# Potential improvements
+  - Decode the geohash, and aggregate the demand value based on adjacency. The grouping can also be performed by doing clustering. By         doing this, there will be lesser time series to deal     with, and the training of the model can be compute faster. In order to obtain     prediction results for particular geohash, prediction at aggregated level can be disaggregate to their respective values based on the     weightage / ratio.
+  
+  - Model performances can still be futher improved, by performing statistical decompose for ARIMA, or changing the parameter, or using       new algorithms
